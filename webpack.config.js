@@ -24,10 +24,13 @@ module.exports = {
   	devtool: NODE_ENV == 'development1' ? 'eval' : false,
 
   	plugins: [
-  	new webpack.NoEmitOnErrorsPlugin(),
-  	new webpack.DefinePlugin({
-    		NODE_ENV: JSON.stringify(NODE_ENV)
-    	})
+	  	new webpack.NoEmitOnErrorsPlugin(),
+	  	new webpack.DefinePlugin({
+	    		NODE_ENV: JSON.stringify(NODE_ENV)
+	    	}),
+	  	new webpack.optimize.CommonsChunkPlugin({
+	  		name: 'common'
+	  	})
 	],
 
 	module: {rules: [{
