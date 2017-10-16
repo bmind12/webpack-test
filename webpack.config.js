@@ -8,7 +8,8 @@ module.exports = {
 
   	entry: {
   		home: './home',
-  		about: './about'
+  		about: './about',
+  		common: './common'
   	},
 
 	output: {
@@ -29,7 +30,8 @@ module.exports = {
 	    		NODE_ENV: JSON.stringify(NODE_ENV)
 	    	}),
 	  	new webpack.optimize.CommonsChunkPlugin({
-	  		name: 'common'
+	  		name: 'common',
+	  		minChunks: 2
 	  	})
 	],
 
