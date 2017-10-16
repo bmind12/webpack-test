@@ -8,8 +8,7 @@ module.exports = {
 
   	entry: {
   		home: './home',
-  		about: './about',
-  		welcome: './welcome'
+  		about: './about'
   	},
 
 	output: {
